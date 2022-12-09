@@ -1,0 +1,108 @@
+<html>
+<head>
+  <title>Users Mouse Trajectory</title>   <!--Titel des Tabs -->
+  <meta charset="UTF-8">
+  <!--  <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.min.js"></script>  -->
+  <script language="javascript" type="text/javascript" src="JS/p5.min.js"></script>
+
+  <!--<script language="javascript" src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/addons/p5.sound.min.js"></script>-->
+  <script language="javascript" type="text/javascript" src="aux_func.js"></script>
+  <script language="javascript" type="text/javascript" src="sketch.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="CSS/styles_jj.css">
+</head>
+
+<body>
+<div id="application">
+  <div class="aside">
+    <h3>Users Mouse Trajectory</h3>
+    <div class="settings">
+      <div id="setting_header">
+        <ul> <!-- unordered list-->
+          <li>dataset:</li>
+          <li>
+            <div id="settings_selects_dataset" class="settings_selects"></div>
+          </li>
+          <li>user</li>
+          <li>
+            <div id="settings_selects_user" class="settings_selects"></div>
+          </li>
+          <li>file</li>
+          <li>
+            <div id="settings_selects_item" class="settings_selects"></div>
+          </li>
+          <li>
+            <div id="settings_select_file" class="settings_selects"></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <div class="main_right">
+      <div id="canvas"></div>
+      <div class="settings_video">
+        <div class="toolbar">
+          <div id="time_selector">
+            <div class="timeslider">
+              <input type="range" min="1" max="100" value="50" class="slider" id="sliderpos">
+            </div>
+          </div>
+          <div id="vidbuttons"></div>
+        </div>
+        <div class="show_options">
+          <legend>Choose Trajectory Options:</legend>
+          <div id="choose_options">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main_left">
+      <aside id="log">
+      <div id="log_output" class="log_output">
+        <legend>Log Output</legend>
+        <div id="log_output--inner"></div>
+        <div id="thinking_pending">
+          <p id="thinking_break" class="hidden">thinking break</p>
+        </div>
+      </div>
+
+      <div class="results">
+        <legend>Results</legend>
+        <div id="distance--wrapper">
+          <span>Travelled Distance: </span>
+          <span id="distance--counter"></span>
+          <span>px</span>
+        </div>
+        <div id="avgspeed--wrapper">
+          <span>Average Mouse Speed: </span>
+          <span id="avg_speed"></span>
+          <span>px/s</span>
+        </div>
+        <div id="current_speed--wrapper">
+          <span>Current Mouse Speed: </span>
+          <span id="current_speed"></span>
+          <span>px/s</span>
+        </div>
+        <div id="clicks_counters--wrapper">
+          <div id="clicks_counter--wrapper">
+            <span>Total Number of Clicks:</span>
+            <span id="clicks_counter"></span>
+          </div>
+        </div>
+        <div id="jump_counters--wrapper">
+          <div id="jump_counter--wrapper">
+            <span>Total Number of Jumps:</span>
+            <span id="jump_counter"></span>
+          </div>
+        </div>
+      </div>
+
+    </aside>
+    </div>
+  </main>
+
+  </div>
+  </body>
+  </html>

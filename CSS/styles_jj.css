@@ -1,0 +1,263 @@
+html {
+    font-family: Helvetica, "Trebuchet MS", Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    display: flex;
+    font-size: 13px;
+    line-height: 1.3em;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    padding-left: 5px;
+    margin-bottom: 0;
+    flex-wrap: wrap;
+    color: #a8a8a8;
+    font-size: 12px;
+}
+
+ul li {
+    display: inline-block;
+    width: 257px;
+    text-align: left;
+    padding-right: 10px;
+}
+
+
+#application {
+    display: flex;
+    height: 100%;
+}
+
+#canvas canvas {
+    margin: 20px 0 0 10px;
+    box-shadow: 0 0 12px 0 #dfdfdf;
+}
+
+.aside {
+    width: 223px;
+    background-color: #3a4f59;
+    padding: 20px;
+    border-right: 1px solid #e2e2e2;
+    box-shadow: 8px 0 9px -7px #888888;
+    z-index: 10;
+    color: #fff;
+}
+
+.settings_selects {
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #fff;
+}
+
+.settings_selects select {
+    width: 210px;
+    margin-right: 10px;
+    height: 2.5em;
+    border: none;
+    background-color: #435c68;
+    border-radius: 3px;
+    padding: 0 6px;
+    color: #fff;
+}
+
+.settings_video {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.toolbar {
+    margin: 5px 0 0 10px;
+    box-shadow: 0 0 12px 0 #dfdfdf;
+    padding: 15px;
+}
+
+#time_selector {
+    display: flex;
+    justify-content: center;
+}
+
+.timeslider {
+    width: 98%;
+}
+
+.slider{
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    border-radius: 15px;
+    background: #c1d6e0;
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+/* The slider handle */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 10px; /* Set a specific slider handle width */
+    height: 10px; /* Slider handle height */
+    background: #889ca6;
+    border-radius: 50%;
+}
+
+.slider::-moz-range-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 10px; /* Set a specific slider handle width */
+    height: 10px; /* Slider handle height */
+    background: #889ca6;
+}
+
+
+#vidbuttons {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.button {
+    padding: 8px;
+    transition: all 0.5s;
+    cursor: pointer;
+    border: none;
+    color: #474a4c;
+    background-color: white;
+}
+
+.show_options {
+    margin: 5px 0 0 10px;
+    box-shadow: 0 0 12px 0 #dfdfdf;
+    padding: 20px 15px;
+}
+
+/* Toggle Button */
+.cm-toggle input {
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    margin: 7px 7px 10px 0;
+}
+
+
+/* To create surface of toggle button */
+.cm-toggle input:after {
+    content: '';
+    width: 35px;
+    height: 15px;
+    display: inline-block;
+    background: rgba(196, 195, 195, 0.55);
+    border-radius: 18px;
+    clear: both;
+}
+
+
+/* Contents before checkbox to create toggle handle */
+.cm-toggle input:before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    display: block;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    border-radius: 50%;
+    background: rgb(255, 255, 255);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+
+/* Shift the handle to left on check event */
+.cm-toggle input:checked:before {
+    left: 22px;
+    box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+/* Background color when toggle button will be active */
+.cm-toggle input:checked:after {
+    background: #547382;
+}
+
+/* Transition for smoothness */
+.cm-toggle input,
+.cm-toggle input:before,
+.cm-toggle input:after,
+.cm-toggle input:checked:before,
+.cm-toggle input:checked:after {
+    transition: ease .1s;
+    -webkit-transition: ease .1s;
+    -moz-transition: ease .1s;
+    -o-transition: ease .1s;
+}
+
+legend {
+    font-size: 16px;
+    padding: 5px 0;
+    font-weight: 700;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #aaa;
+}
+
+label::after {
+    content: "";
+    display: block;
+}
+
+
+.log_output{
+    margin: 20px 0 0 10px;
+    box-shadow: 0 0 12px 0 #dfdfdf;
+    width: 250px;
+    justify-content: center;
+    padding: 15px;
+}
+
+.results{
+    margin: 20px 0 0 10px;
+    box-shadow: 0 0 12px 0 #dfdfdf;
+    width: 250px;
+    justify-content: center;
+    padding: 15px;
+}
+
+#log_output--inner p {
+    margin: 2px;
+}
+
+#log_output--inner {
+    max-height: 89%;
+    overflow: auto;
+    /*todo: set this wia inner style in JS to screenHeight*scale -- see l.267 in styles.js*/
+    /*height: 400px;*/
+}
+
+
+#thinking_break {
+    margin: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.blink {
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
