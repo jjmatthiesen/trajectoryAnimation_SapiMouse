@@ -161,7 +161,7 @@ function setup() {
     UMT.logOutputWrapper = document.getElementById("log_output");
     UMT.logOutput = document.getElementById("log_output--inner");
     // 2x 15 px paddding
-    UMT.logOutputWrapper.style.height = screenHeight -30
+    UMT.logOutputWrapper.style.height = (screenHeight -30).toString()
     UMT.ClickCounter = document.getElementById("clicks_counter");
     UMT.clickValid = document.getElementById("clicks_valid");
     UMT.distanceCounter = document.getElementById("distance--counter");
@@ -325,6 +325,7 @@ function gotData(data) {
   UMT.yCoords = getYCoords(table)[0];
   screenWidth = Math.max(...UMT.xCoords)
   screenHeight = Math.max(...UMT.yCoords)
+  UMT.logOutputWrapper.style.height = (screenHeight -30).toString()
   canvas  = createCanvas(screenWidth, screenHeight);
   noStroke();
   rect(0, 0, screenWidth, screenHeight);
